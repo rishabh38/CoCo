@@ -1,7 +1,7 @@
 # StoreLib
 
 
-This is an awesome and tiny C library which provides memory and register as objects to help you with building ISA function simulators.
+Tiny C library which provides memory and register implementation as objects to help you with building ISA function simulators.
 Just add it to your `library` folder.
 
 ---
