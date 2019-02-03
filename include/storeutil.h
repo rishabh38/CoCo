@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#include "StoreLib/store.h"
+#include "StoreLib/include/store.h"
 
 int writeNumBitstoStore (store STORE, const uint64_t location,
                          const uint64_t wordStartBit, uint64_t number,
