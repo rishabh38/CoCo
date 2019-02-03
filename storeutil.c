@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "store/store.h"
+#include "StoreLib/include/store.h"
 
 #define BIGENDIAN 0
 #define LITTLEENDIAN 1
@@ -156,7 +156,7 @@ bool *readMultiBitsfromStore (const store STORE, const uint64_t location,
  */
 bool *numbertoBitString(uint64_t number, uint64_t length){
   uint64_t actionNumber = number;
-  bool *bitString = malloc(sizeof(bool)*length);
+  bool *bitString = (bool*)malloc(sizeof(bool)*length);
   for (uint64_t i = 0; i < length; i++){
       bitString[i] = actionNumber % 2;
       actionNumber /= 2;
