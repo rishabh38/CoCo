@@ -25,4 +25,9 @@ int writeBittoStore(store givenStore, const uint64_t location,
 int readBitfromStore(const store givenStore, const uint64_t location,
                      const uint64_t bitinWord);
 size_t sizeofStore(store givenStore);
+
+inline bool isStoreUsable (store STORE) {
+  return STORE.set;
+}
+
 #endif
