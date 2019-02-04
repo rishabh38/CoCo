@@ -35,11 +35,11 @@ int checkStore(const store STORE, const uint64_t location,
     return -1;
   }
   if (location >= STORE.totalLocations){
-    printf(STORE_ERROR("Requested location %"PRIu64" out of bound"), location);
+    printf(STORE_ERROR("Requested location %" PRIu64 " out of bound"), location);
     return -1;
   }
   if (wordBit >= STORE.wordSize){
-    printf(STORE_ERROR("Requested 'bit in word'%"PRIu64" out of bound"),
+    printf(STORE_ERROR("Requested 'bit in word'%" PRIu64 " out of bound"),
            wordBit);
     return -1;
   }
