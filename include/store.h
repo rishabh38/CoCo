@@ -30,4 +30,8 @@ inline bool isStoreUsable (store STORE) {
   return STORE.set;
 }
 
+inline size_t totalElements (store STORE) {
+  return STORE.totalLocations;
+}
+
 #endif
