@@ -34,4 +34,8 @@ inline size_t totalElements (store STORE) {
   return STORE.totalLocations;
 }
 
+inline size_t storeWidth (store STORE) {
+  return STORE.wordSize;
+}
+
 #endif
