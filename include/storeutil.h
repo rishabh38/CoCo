@@ -10,7 +10,7 @@ int writeNumBitstoStore (store STORE, const uint64_t location,
                          const uint64_t wordStartBit, uint64_t number,
                          uint64_t length);
 int writeMultiBitstoStore (store STORE, const uint64_t location,
-                           const uint64_t wordStartBit, bool bitArray[],
+                           const uint64_t wordStartBit, const bool bitArray[],
                            uint64_t length);
 uint64_t readNumBitstoStore (store STORE, const uint64_t location,
                              const uint64_t wordStartBit,
@@ -24,6 +24,6 @@ int writeBytestoStore(store STORE, const uint64_t location,
                       const uint64_t wordStartBit, uint64_t number,
                       uint64_t byteLength, bool endianStyle);
 uint64_t readBytesfromStore(const store STORE, const uint64_t location,
-                            const uint64_t wordStartBit, uint64_t byteLength,
+                            const uint64_t wordStartBit, const unsigned byteLength,
                             const bool endianStyle);
 #endif
