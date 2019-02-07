@@ -9,7 +9,7 @@
 int writeNumBitstoStore (store STORE, const uint64_t location,
                          const uint64_t wordStartBit, uint64_t number,
                          uint64_t length);
-int writeMulitBitstoStore (store STORE, const uint64_t location,
+int writeMultiBitstoStore (store STORE, const uint64_t location,
                            const uint64_t wordStartBit, bool bitArray[],
                            uint64_t length);
 uint64_t readNumBitstoStore (store STORE, const uint64_t location,
