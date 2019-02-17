@@ -24,7 +24,7 @@
  * for integer to unsigned integer conversions.
  */
 bool **createMatrix(uint64_t totalRows, uint64_t totalColumns){
-  bool **matrix = (bool**)malloc(sizeof(bool*) * totalColumns);
+  bool **matrix = (bool**)malloc(sizeof(bool*) * totalRows);
   if(matrix == NULL){
     printf(ERROR_MESSAGE("createMatrix",
            "unable to allocate space to data matrix", "NULL"));
@@ -60,7 +60,7 @@ store initializeStore(const uint64_t totalLocations,
                         const uint64_t wordSize){
   store STORE;
 
-  STORE.matrix = createMatrix(wordSize, totalLocations);
+  STORE.matrix = createMatrix(totalLocations, wordSize);
   if (STORE.matrix == NULL){
     printf(INITIALIZE_ERROR_MESSAGE("unable to allocate space to data matrix"));
     return STORE;
