@@ -24,7 +24,7 @@
  * for integer to unsigned integer conversions.
  */
 bool **createMatrix(uint64_t totalRows, uint64_t totalColumns){
-  bool **matrix = (bool**)malloc(sizeof(bool*) * totalRows);
+  bool **matrix = (bool**)calloc(totalRows, sizeof(bool*));
   if(matrix == NULL){
     printf(ERROR_MESSAGE("createMatrix",
            "unable to allocate space to data matrix", "NULL"));
@@ -33,7 +33,7 @@ bool **createMatrix(uint64_t totalRows, uint64_t totalColumns){
 
   bool NULLcheck = false;
   for (uint64_t index = 0; index < totalRows; index++){
-    matrix[index] = (bool*)malloc(sizeof(bool) * totalColumns);
+    matrix[index] = (bool*)calloc(totalColumns, sizeof(bool));
     if(matrix[index] == NULL){
       NULLcheck = true;
       break;
